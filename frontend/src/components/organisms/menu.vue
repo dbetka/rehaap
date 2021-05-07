@@ -4,16 +4,13 @@
     :class="isOpen ? 'f-open' : ''"
     v-touch:swipe.right="close"
   >
-    <div class="a-text f-title f-menu">{{ $t('general.hello') }}, {{ $store.getters['user/userTeam'] }}</div>
+    <div class="a-text f-title f-menu">{{ $t('general.hello') }}, Fizjo</div>
 
-    <div v-if="checkIsCommon()" class="a-text f-subtitle f-menu">
+    <div class="a-text f-subtitle f-menu">
       {{ $t('general.alreadyCollectedShort') }}
       <span class="f-text-primary-contrast">
         {{ $store.getters['user/sumOfCollectedPoints'] }} {{ $t('general.pointUnit') }}
       </span>
-    </div>
-    <div v-else class="a-text f-subtitle f-menu">
-      {{ checkIsNotLimited() ? $t('general.fullAdmin') : $t('general.limitedAdmin') }}
     </div>
 
     <router-link
@@ -32,23 +29,16 @@
     </router-link>
 
     <a-link-menu
-      v-if="checkIsCommon()"
-      @click="openGuide()"
-      :icon="ICONS.help"
-      :text="$t('features.guide.howAppWorks')"
-    />
-
-    <a-link-menu
       @click="toggleTheme()"
       :icon="ICONS.brightness_4"
       :text="themeName === THEMES.light ? $t('general.darkTheme') : $t('general.lightTheme')"
     />
 
-    <a-link-menu
-      @click="signOut()"
-      :icon="ICONS.logout"
-      :text="$t('general.logout')"
-    />
+    <!--    <a-link-menu-->
+    <!--      @click="signOut()"-->
+    <!--      :icon="ICONS.logout"-->
+    <!--      :text="$t('general.logout')"-->
+    <!--    />-->
 
     <div v-if="isOpen" class="a-version">
       v{{ VERSION }}
@@ -77,18 +67,9 @@ export default {
       'isOpen',
     ]),
     links () {
-      const isAdmin = this.checkIsAdmin();
-      const isUnlimited = isAdmin && this.checkIsNotLimited();
-      const isCommon = this.checkIsCommon();
       const links = [
-        ROUTES.start,
-        ROUTES.temporaryPoints,
-        isCommon ? ROUTES.collectPoint : undefined,
-        isAdmin ? ROUTES.scoreboard : ROUTES.collectedPoints,
-        isUnlimited ? ROUTES.editEvent : undefined,
-        isUnlimited ? ROUTES.newPoint : undefined,
-        ROUTES.map,
-        isCommon ? ROUTES.about : undefined,
+        ROUTES.welcome,
+        ROUTES.about,
       ];
       return links.filter(route => uCheck.isUndefined(route) === false);
     },
@@ -121,13 +102,13 @@ export default {
       }
 
     },
-    signOut () {
-      this.$store.dispatch('user/signOut')
-        .finally(() => this.onSignOut());
-    },
-    onSignOut () {
-      this.$router.push(ROUTES.welcome.path);
-    },
+    // signOut () {
+    //   this.$store.dispatch('user/signOut')
+    //     .finally(() => this.onSignOut());
+    // },
+    // onSignOut () {
+    //   this.$router.push(ROUTES.welcome.path);
+    // },
   },
 };
 </script>

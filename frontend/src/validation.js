@@ -5,7 +5,7 @@ import {
   ValidationProvider,
 } from 'vee-validate';
 import * as rules from 'vee-validate/dist/rules';
-import { messages } from 'vee-validate/dist/locale/pl.json';
+import dictionary from 'vee-validate/dist/locale/pl.json';
 import validateTools from 'vendors/validate-tools';
 import { translator } from 'src/dictionary';
 
@@ -13,6 +13,7 @@ import { translator } from 'src/dictionary';
 Vue.component('validation-provider', ValidationProvider);
 Vue.component('validation-observer', ValidationObserver);
 
+const { messages } = dictionary;
 messages.required = translator.t('form.validation.required');
 messages.email = translator.t('form.validation.email');
 messages.min = translator.t('form.validation.min');
