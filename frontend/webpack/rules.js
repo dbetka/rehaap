@@ -48,5 +48,12 @@ module.exports = {
         ],
       },
     },
+    {
+      test: /\.tc$/,
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-typescript'],
+      },
+    },
   ],
 };

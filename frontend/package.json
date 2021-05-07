@@ -2,7 +2,7 @@
   "name": "rehapp",
   "version": "0.1.0",
   "description": "Rehapp",
-  "main": "src/index.js",
+  "main": "src/index.tc",
   "scripts": {
     "serve:dev": "webpack serve --config webpack.dev.js",
     "build:dev": "npx webpack --config webpack.dev.js --watch",
@@ -27,9 +27,11 @@
     "glob": "^7.1.6",
     "html-webpack-plugin": "^4.5.0",
     "ol": "^6.2.1",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.13.0",
     "@babel/core": "^7.9.0",
     "@dbetka/utils": "^0.1.3",
     "@dbetka/vue-material-icons": "^0.2.5",

@@ -13,7 +13,7 @@ webpackUtils.removeOldBundleFiles('public/*app.js');
 
 module.exports = {
   mode: 'development',
-  entry: 'src/index.js',
+  entry: 'src/index.tc',
   optimization: {
     splitChunks: {
       chunks: 'all',
