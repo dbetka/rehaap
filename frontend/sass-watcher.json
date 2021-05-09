@@ -1,0 +1,4 @@
+{
+  "input-dir": "src/style/",
+  "output": "src/style/__cache__/index.sass"
+}
