@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build-css-list": "node scripts/css-files.js",
+    "sass-watcher": "node scripts/sass-watcher.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest ../static",
     "lint": "vue-cli-service lint"
