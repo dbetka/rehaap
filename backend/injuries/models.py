@@ -9,15 +9,5 @@ class PatientInjuries(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
     description = models.TextField()
-
-
-class InjuriesDocuments(models.Model):
-
-    injury = models.ForeignKey(PatientInjuries, on_delete=models.CASCADE)
-    document = models.ForeignKey(Documents, on_delete=models.CASCADE)
-
-
-class InjuriesImages(models.Model):
-
-    injury = models.ForeignKey(PatientInjuries, on_delete=models.CASCADE)
-    image = models.ForeignKey(Images, on_delete=models.CASCADE)
+    documents = models.ManyToManyField(Documents)
+    images = models.ManyToManyField(Images)
