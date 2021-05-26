@@ -5,6 +5,7 @@
     "sass-watcher": "sass-watcher --config sass-watcher.json",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest ../static",
+    "build-watch": "vue-cli-service build --dest ../static --watch",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
