@@ -1,5 +1,7 @@
 */venv/*
 *pycache*
+*sqlite3
+*migrations*
 
 .DS_Store
 node_modules
