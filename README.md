@@ -16,9 +16,14 @@
 - npm v6.14.0 or higher
 
 ### How to prepare Intellij IDE (Webstorm / Pycharm) for front-end development
-3. You have to get into `Settings/Editor/Code Style/HTML`, find `Do not indent children of` option 
+1. You have to get into `Settings/Editor/Code Style/HTML`, find `Do not indent children of` option 
    in tab `Other` and add `script` tag there.
-4. Restart IDE
+2. Go to `Settings/Plugins` tab `Marketplace` and install `Multirun`.
+3. Restart IDE
+4. Find top tab called `Run` and find there `Edit Configurations`. Click on `+` and 
+   select `Multirun`. Set name on `Run project` and add scripts (run serve and run 
+   sass-watcher) below into `Choose configurations to run`. Remember to set `Allow 
+   parallel run` and `Start configurations one by one` options on checked.
 
 
 ## Development
