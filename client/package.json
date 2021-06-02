@@ -2,19 +2,19 @@
   "name": "rehapp",
   "version": "0.1.0",
   "scripts": {
-    "sass-watcher": "sass-watcher --config sass-watcher.json",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest ../static",
+    "lint": "vue-cli-service lint",
     "build-watch": "vue-cli-service build --dest ../static --watch",
-    "lint": "vue-cli-service lint"
+    "sass-watcher": "sass-watcher --config sass-watcher.json"
   },
   "dependencies": {
+    "@dbetka/sass-watcher": "^0.1.5",
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0",
-    "@dbetka/sass-watcher": "^0.1.5"
+    "vuex": "^4.0.0-0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.18.0",
@@ -38,6 +38,7 @@
     "eslint-plugin-vue": "^7.0.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "typescript": "~4.1.5"
+    "typescript": "~4.1.5",
+    "vue-cli-plugin-ts-paths": "0.0.4"
   }
 }

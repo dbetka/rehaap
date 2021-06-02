@@ -15,9 +15,20 @@
       "webpack-env"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "src/*": ["src/*"],
+      "components/*": ["src/components/*"],
+      "api": ["src/api"],
+      "store": ["src/store"],
+      "store/*": ["src/store/*"],
+      "utils/*": ["src/utils/*"],
+
+      "atoms/*": ["src/components/atoms/*"],
+      "molecules/*": ["src/components/molecules/*"],
+      "organisms/*": ["src/components/organisms/*"],
+      "templates/*": ["src/components/templates/*"],
+      "pages/*": ["src/components/pages/*"],
+      "extends/*": ["src/components/extends/*"],
+      "mixins/*": ["src/components/mixins/*"]
     },
     "lib": [
       "esnext",

@@ -12,31 +12,32 @@
 ## Installation
 
 ### Requirements
-- node v10.15.3 or higher
-- npm v6.13.7 or higher
+- node v14.0.0 or higher
+- npm v6.14.0 or higher
 
 ### How to prepare Intellij IDE (Webstorm / Pycharm) for front-end development
-1. You have to get into `Settings/Languages & Frameworks/JavaScript/Webpack` and set `frontend/webpack.common.js` as a config file.
-2. Open `Project Files` click by right button on `frontend/.eslintrc` file and click `Apply ESLint Code Style Rules` option.
-3. You have to get into `Settings/Editor/Code Style/HTML`, find `Do not indent children of` option and add `script` tag there.
+3. You have to get into `Settings/Editor/Code Style/HTML`, find `Do not indent children of` option 
+   in tab `Other` and add `script` tag there.
 4. Restart IDE
 
 
 ## Development
 
-### Devel environment
-1. Go to directory: `cd frontend`
+### Devel environment 
+1. Go to directory: `cd client`
 2. Install packages: `npm i`
-6. Run the front-end builder: `npm run build:dev`
-7. App is ready on https://localhost:3030/
-8. If you get into https://localhost:3030/sign-in, the application log you in automatically on 
-   the demo account (to edit demo user's data go to `???file with default db???`).
+3. Run the front-end builder: `npm run serve`
+4. App is ready on https://localhost:8080/
+
+[comment]: <> (8. If you get into https://localhost:8080/sign-in, the application log you in automatically on )
+[comment]: <> (   the demo account &#40;to edit demo user's data go to `???file with default db???`&#41;.)
 
 ### Production environment:
 1. Install packages: `npm i`
-2. Build front-end package: `npm run build:prod`
-2. Run server: `npm run run:prod`
+2. Build front-end package: `npm run build`
 3. App is ready!
+   
+[comment]: <> (2. Run server: ``)
 
 
 ## Version release

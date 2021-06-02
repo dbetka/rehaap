@@ -31,14 +31,17 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <a-button></a-button>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import AButton from 'atoms/button.vue'
 
 export default defineComponent({
   name: 'HelloWorld',
+  components: { AButton },
   props: {
     msg: String,
   },
