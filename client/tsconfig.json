@@ -21,6 +21,7 @@
       "store": ["src/store"],
       "store/*": ["src/store/*"],
       "utils/*": ["src/utils/*"],
+      "assets/*": ["src/assets/*"],
 
       "atoms/*": ["src/components/atoms/*"],
       "molecules/*": ["src/components/molecules/*"],
