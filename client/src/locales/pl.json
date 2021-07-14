@@ -1,0 +1,35 @@
+{
+  "title": {
+    "signIn": "Strona logowania",
+    "short": {
+      "signIn": "Logowanie"
+    }
+  },
+  "general": {
+    "showMore": "pokaż&nbsp;więcej...",
+    "hide": "Ukryj",
+    "edit": "Edytuj",
+    "logout": "Wyloguj",
+    "remove": "Usuń"
+  },
+  "form": {
+    "field": {
+      "email": "E-mail",
+      "password": "Hasło"
+    },
+    "assist": {
+    },
+    "validation": {
+    },
+    "button": {
+    }
+  },
+  "page": {
+    "signIn": {
+    }
+  },
+  "error": {
+  },
+  "apiError": {
+  }
+}

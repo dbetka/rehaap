@@ -6,6 +6,7 @@
     "build": "vue-cli-service build --dest ../static",
     "lint": "vue-cli-service lint",
     "build-watch": "vue-cli-service build --dest ../static --watch",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
     "sass-watcher": "sass-watcher --config sass-watcher.json"
   },
   "dependencies": {
@@ -13,10 +14,12 @@
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
+    "vue-i18n": "^9.1.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
+    "@intlify/vue-i18n-loader": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -39,7 +42,7 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "typescript": "~4.1.5",
-    "vue-cli-plugin-ts-paths": "0.0.4",
-    "vue-i18n": "^9.1.7"
+    "vue-cli-plugin-i18n": "~2.1.1",
+    "vue-cli-plugin-ts-paths": "0.0.4"
   }
 }

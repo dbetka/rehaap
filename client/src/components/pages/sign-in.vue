@@ -1,6 +1,6 @@
 <template>
   <div>
-    Strona logowania
+    {{ $t('title.signIn') }}
   </div>
 </template>
 
