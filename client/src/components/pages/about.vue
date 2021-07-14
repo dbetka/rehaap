@@ -1,13 +1,13 @@
 <template>
-  <o-header/>
-  <router-view class="f-flex-1"/>
+  <div class="about">
+    <h1>This is an about page</h1>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import OHeader from 'organisms/header.vue'
 
 export default defineComponent({
-  components: { OHeader },
+  name: 'p-about',
 })
 </script>
